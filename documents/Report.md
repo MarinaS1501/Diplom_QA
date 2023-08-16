@@ -15,7 +15,7 @@
 Неуспешных кейсов 26,41%
 Сломанных кейсов 15,09%
 
-![подпись](/Users/marinashestakova/Desktop/Diplom/Снимок экрана 2023-08-12 в 15.06.11.png "Дополнительное описание")
+![подпись](https://github.com/MarinaS1501/Diplom_QA/blob/master/documents/allure.jpg?raw=true)
 
 **Общие рекомендации**
 
