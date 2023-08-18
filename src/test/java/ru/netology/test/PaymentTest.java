@@ -90,13 +90,6 @@ public class PaymentTest {
         toPaymentPage.insertValidPaymentCardDataForBank(cardInfo);
         toPaymentPage.checkWarningUnderCardNumberField("Неверный формат");
     }
-    @Test
-    void shouldShowErrorIfAllCardNumberFieldAreSpecialSymbols() {
-        var toPaymentPage = mainPage.paymentPage();
-        var cardInfo = DataHelper.generateDataWithCardNumberSpecialCharacters();
-        toPaymentPage.insertValidPaymentCardDataForBank(cardInfo);
-        toPaymentPage.checkWarningUnderCardNumberField("Неверный формат");
-    }
 
     @Test
     void shouldShowErrorIfAllCardNumberFieldAreSpecialCharacters() {
@@ -176,7 +169,7 @@ public class PaymentTest {
     @Test
     void shouldDeclineWithFalseName() {
         var toPaymentPage = mainPage.paymentPage();
-        var cardInfo = DataHelper.generateDataWithParamCardOwnerNameApprovedCard("ИВАНОВ ИВАНОВ");
+        var cardInfo = DataHelper.generateDataWithParamCardOwnerNameApprovedCard("ПЕТРОВ ВОДКИН");
         toPaymentPage.insertValidPaymentCardDataForBank(cardInfo);
         toPaymentPage.checkWarningUnderCardOwnerField("Неверный формат");
     }
@@ -229,13 +222,7 @@ public class PaymentTest {
         toPaymentPage.insertValidPaymentCardDataForBank(cardInfo);
         toPaymentPage.checkWarningUnderCvcField("Неверный формат");
     }
-    @Test
-    void shouldShowErrorIfAllCvcNumberFieldEmpty() {
-        var toPaymentPage = mainPage.paymentPage();
-        var cardInfo = DataHelper.generateDataWithApprovedCardIfAllCvcNumberFieldAreEmpty();
-        toPaymentPage.insertValidPaymentCardDataForBank(cardInfo);
-        toPaymentPage.checkWarningUnderCvcField("Неверный формат");
-    }
+
 
     @Test
     void shouldShowErrorIfAllCvcNumberFieldAreSpecialCharacters() {

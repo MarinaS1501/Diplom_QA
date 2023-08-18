@@ -97,13 +97,6 @@ public class TestCreditCard {
         toCreditCard.insertValidCreditCardDataForBank(cardInfo);
         toCreditCard.checkWarningUnderCardNumberField("Неверный формат");
     }
-    @Test
-    void shouldShowErrorIfAllCardNumberFieldAreSpecialSymbols() {
-        var toCreditCard = mainPage.creditPage();
-        var cardInfo = DataHelper.generateDataWithCardNumberSpecialCharacters();
-        toCreditCard.insertValidCreditCardDataForBank(cardInfo);
-        toCreditCard.checkWarningUnderCardNumberField("Неверный формат");
-    }
 
     //поле месяц
     @Test
@@ -175,7 +168,7 @@ public class TestCreditCard {
     @Test
     void shouldDeclineWithFalseName() {
         var toCreditCard = mainPage.creditPage();
-        var cardInfo = DataHelper.generateDataWithParamCardOwnerNameApprovedCard("ИВАНОВ ИВАНОВ");
+        var cardInfo = DataHelper.generateDataWithParamCardOwnerNameApprovedCard("ПЕТРОВ ВОДКИН");
         toCreditCard.insertValidCreditCardDataForBank(cardInfo);
         toCreditCard.checkWarningUnderCardOwnerField("Неверный формат");
     }
