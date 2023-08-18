@@ -8,6 +8,7 @@ data/
 node_modules/
 allure-results/
 *.bat
+driver/
 
 ### STS ###
 .apt_generated
@@ -24,6 +25,7 @@ allure-results/
 *.iml
 *.ipr
 out/
+
 
 ### NetBeans ###
 /nbproject/private/
